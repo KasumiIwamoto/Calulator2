@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 result = calc(recentOperator, result, value);
                 editText.setText(String.valueOf(result));
             }
-
             recentOperator = operatorButton.getId();
             textView.setText(operatorButton.getText());
             isOperatorKeyPushed = true;
@@ -83,11 +82,9 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 editText.append(button.getText());
             }
-
             isOperatorKeyPushed = false;
         }
     };
-    
     double calc(int operator, double value1, double value2) {
         switch (operator) {
             case R.id.button_add:
